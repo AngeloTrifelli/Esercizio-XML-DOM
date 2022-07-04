@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT listaUtenti (utente*)>
+<!ELEMENT utente (nome,cognome,dataDiNascita,indirizzoDomicilio?,credenziali)>
+<!ATTLIST utente 
+    codFisc CDATA #REQUIRED>
+<!ELEMENT nome (#PCDATA)>
+<!ELEMENT cognome (#PCDATA)>
+<!ELEMENT dataDiNascita (giorno,mese,anno)>
+<!ELEMENT indirizzoDomicilio (via,civico)>
+<!ELEMENT credenziali (email,password)>
+<!ELEMENT giorno (#PCDATA)>
+<!ELEMENT mese (#PCDATA)>
+<!ELEMENT anno (#PCDATA)>
+<!ELEMENT via (#PCDATA)>
+<!ELEMENT civico (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT password (#PCDATA)>

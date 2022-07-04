@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE listaUtenti SYSTEM "utenti.dtd">
+<listaUtenti>
+    <utente codFisc="RSSGNN64R03E472G">
+        <nome>
+            Giovanni
+        </nome>
+        <cognome>
+            Rossi
+        </cognome>
+        <dataDiNascita>
+            <giorno>
+                3
+            </giorno>
+            <mese>
+                10
+            </mese>
+            <anno>
+                1964
+            </anno>
+        </dataDiNascita>
+        <indirizzoDomicilio>
+            <via>
+                del quasimodo
+            </via>
+            <civico>
+                13
+            </civico>
+        </indirizzoDomicilio>
+        <credenziali>
+            <email>
+                giovanni.rossi64@gmail.com
+            </email>
+            <password>
+                Giovanni64
+            </password>
+        </credenziali>
+    </utente>
+</listaUtenti>
