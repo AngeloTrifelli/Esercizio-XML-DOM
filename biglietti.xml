@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<listaBiglietti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="biglietti.xsd">
+    <biglietto tipo="BASIC">
+        <prezzo>
+            40
+        </prezzo>
+    </biglietto>
+    <biglietto tipo="DELUXE">
+        <prezzo>
+            60
+        </prezzo>
+    </biglietto>
+    <biglietto tipo="PREMIUM">
+        <prezzo>
+            90
+        </prezzo>
+    </biglietto>
+</listaBiglietti>

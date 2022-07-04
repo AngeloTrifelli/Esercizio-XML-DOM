@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<listaAssociazioni xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="associazioni.xsd">
+    <associazione id="1" numPosti="300">
+        <biglietto>
+            BASIC
+        </biglietto>
+        <artista>
+            Blanco
+        </artista>
+    </associazione>
+    <associazione id="2" numPosti="200">
+        <biglietto>
+            DELUXE
+        </biglietto>
+        <artista>
+            Blanco
+        </artista>
+    </associazione>
+    <associazione id="3" numPosti="100">
+        <biglietto>
+            PREMIUM
+        </biglietto>
+        <artista>
+            Blanco
+        </artista>
+    </associazione>
+    <associazione id="4" numPosti="250">
+        <biglietto>
+            BASIC
+        </biglietto>
+        <artista>
+            Green Day
+        </artista>
+    </associazione>
+    <associazione id="5" numPosti="150">
+        <biglietto>
+            PREMIUM
+        </biglietto>
+        <artista>
+            Green Day
+        </artista>
+    </associazione>
+    <associazione id="6" numPosti="200">
+        <biglietto>
+            BASIC
+        </biglietto>
+        <artista>
+            Pink Floyd
+        </artista>
+    </associazione>
+</listaAssociazioni>
