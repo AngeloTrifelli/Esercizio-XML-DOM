@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE listaArtisti SYSTEM "artisti.dtd">
+<listaArtisti>
+    <artista linkImmagine="logoGreenDay">
+        <nome>
+            Green Day
+        </nome>
+        <descrizione>
+            I Green Day sono un gruppo musicale pop punk statunitense formatosi a Berkeley nel 1986 e composto da tre membri: Billie Joe Armstrong (chitarra e voce), Mike Dirnt (basso e voce secondaria) e Tré Cool (batteria).
+            Sono tra i gruppi musicali con più vendite della storia, avendo venduto più di 85 milioni di dischi in tutto il mondo. Inoltre la rivista Rolling Stone, li ha inseriti nella lista New Immortals, elenco degli artisti definiti le nuove leggende della storia della musica.
+            Nel 1994, grazie al successo del loro terzo album Dookie, il quale, con 10 dischi di platino e uno di diamante, ha venduto più di 10 milioni di copie solo negli Stati Uniti e 15 in tutto il mondo, sono stati annoverati, insieme a gruppi come Offspring e Rancid, tra le band che hanno riportato il punk rock nella musica mainstream.
+        </descrizione>
+        <dataOra>
+            <data>
+                <giorno>
+                    16
+                </giorno>
+                <mese>
+                    6
+                </mese>
+                <anno>
+                    2022
+                </anno>
+            </data>
+            <ora>
+                18:00
+            </ora>
+        </dataOra>
+    </artista>
+    <artista linkImmagine="logoPinkFloyd">
+        <nome>
+            Pink Floyd
+        </nome>
+        <descrizione>
+            I Pink Floyd sono stati un gruppo rock britannico, fondato a Londra nel 1965. <![CDATA[<br />]]>Con la scrittura di Roger Waters e le fantasche melodie di David Guilmoure hanno rappresentato una vera e propria epoca del rock e del progressive. 
+            <![CDATA[<br />]]>Al Sapienza Musical Festival potrai ritornare indietro nel tempo e essere presente al ritorno di questa band leggendaria.
+        </descrizione>
+        <dataOra>
+            <data>
+                <giorno>
+                    26
+                </giorno>
+                <mese>
+                    5
+                </mese>
+                <anno>
+                    2022
+                </anno>
+            </data>
+            <ora>
+                21:00
+            </ora>
+        </dataOra>
+    </artista>
+    <artista linkImmagine="logoBlanco">
+        <nome>
+            Blanco
+        </nome>
+        <descrizione>
+            Blanco, pseudonimo di Riccardo Fabbriconi (Brescia, 10 febbraio 2003), è un cantautore italiano.<![CDATA[<br />]]> È salito alla ribalta nel 2021 con i successi La canzone nostra e Mi fai impazzire, arrivati al vertice della Top Singoli italiana. Ha in seguito pubblicato il suo primo album Blu celeste, certificato quadruplo platino e trainato dai singoli Notti in bianco, Paraocchi. Nel 2022 ha vinto il 72º Festival di Sanremo con il brano Brividi, in duetto con Mahmood, la cui canzone è entrata in classifiche di vari Paesi e con la quale ha rappresentato l\'Italia all\'Eurovision Song Contest 2022.
+        </descrizione>
+        <dataOra>
+            <data>
+                <giorno>
+                    28
+                </giorno>
+                <mese>
+                    7
+                </mese>
+                <anno>
+                    2022
+                </anno>
+            </data>
+            <ora>
+                21:00
+            </ora>
+        </dataOra>
+    </artista>
+</listaArtisti>

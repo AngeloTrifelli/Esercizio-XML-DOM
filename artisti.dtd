@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!NOTATION jpg SYSTEM "image/jpeg">
+<!ELEMENT listaArtisti (artista*)>
+<!ELEMENT artista (nome,descrizione,dataOra)>
+<!ATTLIST artista 
+    linkImmagine ENTITY #REQUIRED>
+<!ENTITY logoGreenDay SYSTEM "https://dynamicmedia.livenationinternational.com/Media/w/b/t/aee34fb2-a93f-402e-a7a3-89f745cc6352.jpg" NDATA jpg>
+<!ENTITY logoPinkFloyd SYSTEM "https://favolosi60com.files.wordpress.com/2021/04/pink-floyd-1973-32d763d9-8deb-4cd8-a287-92ae0de7df3a.jpg" NDATA jpg>
+<!ENTITY logoBlanco SYSTEM "https://m.media-amazon.com/images/I/A1S3OwNU+NL._AC_SL1500_.jpg" NDATA jpg>
+<!ELEMENT nome (#PCDATA)>
+<!ELEMENT descrizione (#PCDATA)>
+<!ELEMENT dataOra (data,ora)>
+<!ELEMENT data (giorno,mese,anno)>
+<!ELEMENT ora (#PCDATA)>
+<!ELEMENT giorno (#PCDATA)>
+<!ELEMENT mese (#PCDATA)>
+<!ELEMENT anno (#PCDATA)>
