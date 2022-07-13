@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE listaUtenti SYSTEM "utenti.dtd">
 <listaUtenti>
-    <utente codFisc="RSSGNN64R03E472G">
-        <nome>
+     <utente codFisc="RSSGNN64R03E472G">
+         <nome>
             Giovanni
         </nome>
         <cognome>
@@ -27,6 +27,14 @@
                 13
             </civico>
         </indirizzoDomicilio>
+        <prenotazione>
+            <nomeArtista>
+                Green Day
+            </nomeArtista>
+            <tipoBiglietto>
+                BASIC
+            </tipoBiglietto>
+        </prenotazione>
         <credenziali>
             <email>
                 giovanni.rossi64@gmail.com
