@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE listaArtisti SYSTEM "artisti.dtd">
 <listaArtisti>
-    <artista linkImmagine="logoGreenDay">
+    <artista  idArtista="1" linkImmagine="https://dynamicmedia.livenationinternational.com/Media/w/b/t/aee34fb2-a93f-402e-a7a3-89f745cc6352.jpg">
         <nome>
             Green Day
         </nome>
@@ -26,8 +26,16 @@
                 18:00
             </ora>
         </dataOra>
+        <associazionebiglietto id="1">
+                <tipo>BASIC</tipo>
+                <numposti>250</numposti>
+        </associazionebiglietto>
+        <associazionebiglietto id="2">
+            <tipo>PREMIUM</tipo>
+            <numposti>150</numposti>
+        </associazionebiglietto>
     </artista>
-    <artista linkImmagine="logoPinkFloyd">
+    <artista idArtista="2" linkImmagine="https://favolosi60com.files.wordpress.com/2021/04/pink-floyd-1973-32d763d9-8deb-4cd8-a287-92ae0de7df3a.jpg">
         <nome>
             Pink Floyd
         </nome>
@@ -51,8 +59,12 @@
                 21:00
             </ora>
         </dataOra>
+        <associazionebiglietto id="1">
+            <tipo>BASIC</tipo>
+            <numposti>200</numposti>
+        </associazionebiglietto>
     </artista>
-    <artista linkImmagine="logoBlanco">
+    <artista idArtista="3" linkImmagine="https://m.media-amazon.com/images/I/A1S3OwNU+NL._AC_SL1500_.jpg">
         <nome>
             Blanco
         </nome>
@@ -75,5 +87,17 @@
                 21:00
             </ora>
         </dataOra>
+        <associazionebiglietto id="1">
+            <tipo>BASIC</tipo>
+            <numposti>300</numposti>
+        </associazionebiglietto>
+        <associazionebiglietto id="2">
+            <tipo>DELUXE</tipo>
+            <numposti>200</numposti>
+        </associazionebiglietto>
+        <associazionebiglietto id="3">
+            <tipo>PREMIUM</tipo>
+            <numposti>100</numposti>
+        </associazionebiglietto>
     </artista>
 </listaArtisti>
