@@ -100,6 +100,9 @@
                 if($testoEmail == $emailUtente && $testoPassword == $passwordUtente){
                     $trovato = "True";
                 }
+                else{
+                    $i++;
+                }   
             }
  
             $nuovaPrenotazione = $docUtenti->createElement("prenotazione");
