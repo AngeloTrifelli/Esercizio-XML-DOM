@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!ELEMENT listaUtenti (utente*)>
-<!ELEMENT utente (nome,cognome,dataDiNascita,indirizzoDomicilio?,prenotazione?,credenziali)>
+<!ELEMENT utente (nome,cognome,dataDiNascita,indirizzoDomicilio?,credenziali,prenotazione*)>
 <!ATTLIST utente 
     codFisc ID #REQUIRED>
 <!ELEMENT nome (#PCDATA)>
 <!ELEMENT cognome (#PCDATA)>
 <!ELEMENT dataDiNascita (giorno,mese,anno)>
 <!ELEMENT indirizzoDomicilio (via,civico?)>
-<!ELEMENT prenotazione (nomeArtista, tipoBiglietto)>
 <!ELEMENT credenziali (email,password)>
+<!ELEMENT prenotazione (nomeArtista, tipoBiglietto)>
 <!ELEMENT giorno (#PCDATA)>
 <!ELEMENT mese (#PCDATA)>
 <!ELEMENT anno (#PCDATA)>
 <!ELEMENT via (#PCDATA)>
 <!ELEMENT civico (#PCDATA)>
-<!ELEMENT nomeArtista (#PCDATA)>
-<!ELEMENT tipoBiglietto (#PCDATA)>
 <!ELEMENT email (#PCDATA)>
 <!ELEMENT password (#PCDATA)>
+<!ELEMENT nomeArtista (#PCDATA)>
+<!ELEMENT tipoBiglietto (#PCDATA)>
