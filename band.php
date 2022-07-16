@@ -29,7 +29,7 @@
     $tipoBiglietti = $xpathBiglietti->query("//@tipo");
     $prezzoBiglietti = $xpathBiglietti->query("//prezzo");
 
-    $associazionePrezzo = array();
+    $associazionePrezzo = array();          /*Questo array verrà usato dopo per assegnare correttamente il prezzo a ciascun tipo di biglietto*/
 
     for($i=0 ; $i < $tipoBiglietti->length ; $i++){
         $tipoBiglietto = $tipoBiglietti->item($i);
@@ -40,6 +40,20 @@
 
         $associazionePrezzo[$testoTipoBiglietto] = $testoPrezzoBiglietto;
     }
+
+
+    $xmlStringUtenti = "";
+    foreach(file("../XML/utenti.xml") as $node){
+        $xmlStringUtenti .= trim($node);
+    }
+
+    $docUtenti = new DOMDocument();
+    $docUtenti->loadXML($xmlStringUtenti);
+
+    $listaPrenotazioni = $docUtenti->getElementsByTagName("prenotazione");    /*Verrà utilizzata dopo per modificare dinamicamente il numero di posti disponibili*/
+    
+
+
 
 
     if(isset($_POST['logout'])){
@@ -149,25 +163,21 @@
                     </td>
 
                     <?php 
-                    // $queryBiglietti = "SELECT * FROM associato WHERE id_artista=\"{$artista['nome']}\" ";
-                    // $resultQ2 = mysqli_query($mysqliConnection,$queryBiglietti);
-
-                   
-                    // while($biglietto = mysqli_fetch_array($resultQ2)){
-                    //     $queryPrezzo = "SELECT prezzo FROM biglietto WHERE tipo=\"{$biglietto['id_biglietto']}\" ";
-                    //     $resultQ3 = mysqli_query($mysqliConnection,$queryPrezzo);
-                    //     $prezzo = mysqli_fetch_array($resultQ3);
-
-                    //     $queryNumPrenotazioni = "SELECT COUNT(*) FROM prenota WHERE id_associazione = {$biglietto['id']} ";
-                    //     $resultQ4 = mysqli_query($mysqliConnection,$queryNumPrenotazioni);
-                    //     $numPrenotazioni = mysqli_fetch_array($resultQ4);
-
-                    //     $postiDisponibili = $biglietto['numPosti'] - $numPrenotazioni[0];
                         for($j=0 ; $j < $numAssociazioni ; $j++){
                             $temp = $temp->nextSibling;
                             $testoTipoBiglietto = $temp->firstChild->textContent;
                             $testoNumPosti = $temp->lastChild->textContent;
                             $idAssociazione = $temp->getAttribute("id");
+
+                            for($k=0 ; $k<$listaPrenotazioni->length ; $k++){
+                                $prenotazione = $listaPrenotazioni->item($k);
+                                $testoArtistaPrenotazione = $prenotazione->firstChild->textContent;
+                                $testoBigliettoPrenotazione = $prenotazione->lastChild->textContent;
+
+                                if($testoArtistaPrenotazione == $testoNome && $testoBigliettoPrenotazione == $testoTipoBiglietto){
+                                    $testoNumPosti -= 1;
+                                }
+                            }
                     ?>
 
                     <td>
