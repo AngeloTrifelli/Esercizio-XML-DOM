@@ -19,8 +19,8 @@
 
             for($i=0 ; $i < $listaUtenti->length ; $i++){
                 $utente = $listaUtenti->item($i);
-                $elemCredenziali = $utente->lastChild;
-
+                $elemCredenziali = $utente->getElementsByTagName("credenziali")->item(0);
+                
                 $testoEmail = $elemCredenziali->firstChild->textContent;
                 $testoPassword = $elemCredenziali->lastChild->textContent;
                 
