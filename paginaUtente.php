@@ -52,30 +52,27 @@ foreach(file("../XML/utenti.xml") as $node){
         </div>
 </div>
 <?php
-
-for($i=0 ; $i < $listaUtenti->length ; $i++ ){
+$i=0;
+$trovato="False";
+while($i < $listaUtenti->length && $trovato=="False"){
         $utente= $listaUtenti->item($i);
-        $var=$utente->firstChild;
-        $var=$var->nextSibling;
-        $var=$var->nextSibling;
-        $var=$var->nextSibling;
-        $var=$var->nextSibling;
-        $testoEmailUtente=$var->firstChild->textContent;
-        $testoPasswordUtente=$var->lastChild->textContent;
-
+        $elemCredenziali=$utente->getElementsByTagName("credenziali")->item(0);
+        
+        $testoEmailUtente=$elemCredenziali->firstChild->textContent;
+        $testoPasswordUtente=$elemCredenziali->lastChild->textContent;
         if(($testoEmailUtente == ($_SESSION['emailUtente'])) && ($testoPasswordUtente == ($_SESSION['passwordUtente']))){
-
+            
             $codFiscUtente = $utente->getAttribute("codFisc");
 
                 $temp = $utente->firstChild;       //nome utente
                 $testoNome = $temp->textContent;
 
-                $temp = $temp->nextSibling;     //cognome utente
-                $testoCognome = $temp->textContent;
+                    
+                $testoCognome = $utente->getElementsByTagName("cognome")->item(0)->textContent;  //cognome utente
 
-                $temp = $temp->nextSibling;     //dataDiNascita utente
+                $elemDataDiNascita = $utente->getElementsByTagName("dataDiNascita")->item(0);  //dataDiNascita utente
 
-                $temp2 = $temp->firstChild;  //giornoNascita utente
+                $temp2 = $elemDataDiNascita->firstChild;  //giornoNascita utente
                 $testoGiorno= $temp2->textContent;
 
                 $temp2 = $temp2->nextSibling;  //meseNascita utente
@@ -84,36 +81,39 @@ for($i=0 ; $i < $listaUtenti->length ; $i++ ){
                 $temp2 = $temp2->nextSibling;  //annoNascita utente
                 $testoAnno = $temp2->textContent;
 
-                $temp = $temp->nextSibling; //indirizzoDiDomicilio
-               
-                $temp2=$temp->firstChild;  //via utente
-                $testoIndirizzo= $temp2->textContent;
+                $elemIndirizzo=$utente->getElementsByTagName("indirizzoDomicilio")->item(0); //indirizzoDiDomicilio
+                $testoIndirizzo="";
+                $testoCivico="";
 
-                $temp2 = $temp2->nextSibling;  //civico utente
-                $testoCivico = $temp2->textContent;
+               if(isset($elemIndirizzo)){
+                $testoIndirizzo= $elemIndirizzo->firstChild->textContent;  //via utente
 
+                  
+                $testoCivico = $elemIndirizzo->lastChild->textContent; //civico utente
+               }
                 $listaPrenotazioni = $utente->getElementsByTagName("prenotazione");
                 $numPrenotazioni= $listaPrenotazioni->length;
 
                 $testoNomeArtista= array();
                 $testoTipoBiglietto= array();
 
-                $temp = $temp->nextSibling; 
 
                 for($j=0; $j<$numPrenotazioni; $j++){
 
-                    $temp = $temp->nextSibling; //prenotazione utente
+                    $elemPrenotazione=$utente->getElementsByTagName("prenotazione")->item($j); //prenotazione utente
                       
-                    $testoNomeArtista[$j]= $temp->firstChild->textContent; //artista associato alla prenotazione j-esima dell'utente
+                    $testoNomeArtista[$j]= $elemPrenotazione->firstChild->textContent; //artista associato alla prenotazione j-esima dell'utente
 
-                    $testoTipoBiglietto[$j] = $temp->lastChild->textContent; //tipoBiglietto associato alla prenotazione j-esima dell'utente
+                    $testoTipoBiglietto[$j] = $elemPrenotazione->lastChild->textContent; //tipoBiglietto associato alla prenotazione j-esima dell'utente
 
                    
 
                 }
-
+                $trovato="True";
         }
-
+        else{
+            $i++;
+        }
     }
 ?>
 
@@ -130,7 +130,7 @@ for($i=0 ; $i < $listaUtenti->length ; $i++ ){
                    <li><strong>Data di nascita:</strong><?php echo $testoAnno."-".$testoMese."-".$testoGiorno; ?></li>
                    <li><strong>Indirizzo di domicilio:</strong><?php echo $testoIndirizzo." ".$testoCivico; ?></li>
                    <li><strong>Email:</strong><?php echo $testoEmailUtente; ?></li>
-
+                   
                 </ul>
             </div>
             
