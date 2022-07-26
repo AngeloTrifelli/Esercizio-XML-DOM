@@ -19,22 +19,17 @@ a{
 
 p{
     margin-bottom: 0;
-    margin-top: 5px;
+    margin-top: 5px; 
 }
 
 
-
-
-.top{
+.navbar{
     top: 0%;
     left: 0%;
     z-index: 1;
     position: fixed;
     width: 100%;
-}
-
-.navbar{
-    display: flex;
+    height: auto;
 }
 
 .black{
@@ -51,31 +46,21 @@ p{
 }
 
 .padding-large{
-    padding: 30px 60px!important;
+    padding: 2% 4%!important;
 }
 
 .button{
-    transition: all 200ms ease ;
+    transition: all 200ms ease;
+    float: left;
     text-decoration: none;
-    vertical-align: middle;
+    color: white; 
+    transition: all 200ms ease;
 }
 
 .button:hover{
     color: #000000!important;
     background-color: #ccc!important;
 }
-
-#loginButton{
-    margin-left: 66.5%;
-}
-
-
-
-
-
-
-
-
 
 .containerImmagine{
     background-image: url("../festival.jpg");
@@ -86,9 +71,6 @@ p{
     height: 100vh;   
 }
 
-
-
-
 .containerBlur{
     height: 100%;
     width: 100%;
@@ -97,9 +79,6 @@ p{
 
     padding-top: 10%;
 }
-
-
-
 
 
 .containerCentrale{
@@ -195,4 +174,8 @@ p{
 .errorLabel{
     color : red;
     font-weight: bolder;
+}
+
+.floatRight{
+    float: right;
 }
