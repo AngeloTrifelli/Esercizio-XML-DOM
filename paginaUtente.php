@@ -87,9 +87,11 @@ while($i < $listaUtenti->length && $trovato=="False"){
 
                if(isset($elemIndirizzo)){
                 $testoIndirizzo= $elemIndirizzo->firstChild->textContent;  //via utente
-
-                  
+                $temp= $elemIndirizzo->firstChild;
+                $temp=$temp->nextSibling;
+                if(isset($temp)){
                 $testoCivico = $elemIndirizzo->lastChild->textContent; //civico utente
+                }
                }
                 $listaPrenotazioni = $utente->getElementsByTagName("prenotazione");
                 $numPrenotazioni= $listaPrenotazioni->length;
