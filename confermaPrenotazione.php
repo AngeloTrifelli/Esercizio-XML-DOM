@@ -90,7 +90,7 @@
             $listaUtenti = $docUtenti->documentElement->childNodes;
             $trovato = "False";
             $i=0;
-
+            
             while($i < $listaUtenti->length && $trovato =="False"){
                 $utente = $listaUtenti->item($i);
                 $credenziali = $utente->getElementsByTagName("credenziali")->item(0);
@@ -102,8 +102,9 @@
                 }
                 else{
                     $i++;
-                }   
+                }
             }
+            
  
             $nuovaPrenotazione = $docUtenti->createElement("prenotazione");
             $utente->appendChild($nuovaPrenotazione);
